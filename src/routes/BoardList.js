@@ -27,7 +27,7 @@ const BoardList = () => {
       .join('&');
 
     const resp = await (
-      await axios.get('//localhost:8080/board?' + queryString)
+      await axios.get('//43.200.96.196:8080/board?' + queryString)
     ).data; // 2) 게시글 목록 데이터에 할당
 
     setBoardList(resp.data); // 3) boardList 변수에 할당
