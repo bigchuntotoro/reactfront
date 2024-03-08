@@ -8,7 +8,7 @@ const BoardDetail = () => {
   const [loading, setLoading] = useState(true);
   const [board, setBoard] = useState({});
   const getBoard = async () => {
-    const resp = await (await axios.get(`//localhost:8080/board/${idx}`)).data;
+    const resp = await (await axios.get(`//43.200.96.196:8080/board/${idx}`)).data;
     setBoard(resp.data);
     setLoading(false);
   };

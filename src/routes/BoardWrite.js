@@ -22,7 +22,7 @@ const BoardWrite = () => {
   };
 
   const saveBoard = async () => {
-    await axios.post(`//localhost:8080/board`, board).then((res) => {
+    await axios.post(`//43.200.96.196:8080/board`, board).then((res) => {
       alert('등록되었습니다.');
       navigate('/board');
     });

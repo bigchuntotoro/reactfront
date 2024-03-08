@@ -23,12 +23,12 @@ const BoardUpdate = () => {
   };
 
   const getBoard = async () => {
-    const resp = await (await axios.get(`//localhost:8080/board/${idx}`)).data;
+    const resp = await (await axios.get(`//43.200.96.196:8080/board/${idx}`)).data;
     setBoard(resp.data);
   };
 
   const updateBoard = async () => {
-    await axios.patch(`//localhost:8080/board`, board).then((res) => {
+    await axios.patch(`//43.200.96.196:8080/board`, board).then((res) => {
       alert('수정되었습니다.');
       navigate('/board/' + idx);
     });
